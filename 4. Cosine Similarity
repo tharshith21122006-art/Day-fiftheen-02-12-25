@@ -1,0 +1,9 @@
+import math
+a = list(map(float, input().split()))
+b = list(map(float, input().split()))
+
+dot = sum(x*y for x, y in zip(a, b))
+mag_a = math.sqrt(sum(x*x for x in a))
+mag_b = math.sqrt(sum(y*y for y in b))
+
+print("Cosine Similarity:", dot / (mag_a * mag_b))
