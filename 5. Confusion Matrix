@@ -1,0 +1,12 @@
+y_true = list(map(int, input().split()))
+y_pred = list(map(int, input().split()))
+
+tp = tn = fp = fn = 0
+for t, p in zip(y_true, y_pred):
+    if t==1 and p==1: tp+=1
+    elif t==0 and p==0: tn+=1
+    elif t==0 and p==1: fp+=1
+    elif t==1 and p==0: fn+=1
+
+print(tp, fp)
+print(fn, tn)
