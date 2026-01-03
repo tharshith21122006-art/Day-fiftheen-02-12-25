@@ -1,0 +1,6 @@
+import math
+data = list(map(float, input().split()))
+mean = sum(data) / len(data)
+var = sum((x - mean)**2 for x in data) / len(data)
+std = math.sqrt(var)
+print("Mean:", mean, "Variance:", var, "Std:", std)
