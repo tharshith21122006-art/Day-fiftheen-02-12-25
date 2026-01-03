@@ -1,0 +1,4 @@
+data = list(map(float, input().split()))
+mn, mx = min(data), max(data)
+norm = [(x - mn) / (mx - mn) for x in data]
+print(norm)
