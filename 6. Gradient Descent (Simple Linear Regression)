@@ -1,0 +1,14 @@
+x = [1,2,3,4]
+y = [2,4,6,8]
+m = b = 0
+lr = 0.01
+
+for _ in range(1000):
+    dm = db = 0
+    for i in range(len(x)):
+        dm += -2*x[i]*(y[i] - (m*x[i] + b))
+        db += -2*(y[i] - (m*x[i] + b))
+    m -= lr * dm / len(x)
+    b -= lr * db / len(x)
+
+print("m =", m, "b =", b)
